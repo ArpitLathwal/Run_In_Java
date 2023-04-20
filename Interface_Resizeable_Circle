@@ -1,0 +1,60 @@
+import java.util.*;
+
+interface GeometricObject {
+    public double getPerimeter();
+    public double getArea();
+}
+
+class Circle implements GeometricObject {
+    double radius;
+
+    Circle(double radius) {
+        this.radius = radius;
+    }
+
+    public double getPerimeter() {
+        double perimeter = (2.0 * 3.14 * radius);
+        return perimeter;
+    }
+
+    public double getArea() {
+        double area;
+        area = 3.14 * radius * radius;
+        return area;
+    }
+}
+
+interface Resizeable {
+    public double resize(int percent);
+}
+
+class ResizeableCircle extends Circle implements Resizeable {
+    ResizeableCircle(double radius) {
+        super(radius);
+    }
+
+    public double resize(int percent) {
+        radius = radius + ((percent * radius) / 100);
+        return radius;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter radius");
+        double radius = sc.nextDouble();
+        System.out.println("Enter change percent");
+        int percent = sc.nextInt();
+
+        Circle ob = new Circle(radius);
+        double area = ob.getArea();
+        System.out.println("Area: " + area);
+        double perimeter = ob.getPerimeter();
+        System.out.println("Perimeter: " + perimeter);
+
+        ResizeableCircle ob1 = new ResizeableCircle(radius);
+        double resized = ob1.resize(percent);
+        System.out.println("Resized radius: " + resized);
+    }
+} 
