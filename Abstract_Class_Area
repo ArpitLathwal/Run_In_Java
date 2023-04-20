@@ -1,0 +1,25 @@
+abstract class Shape{
+    abstract void rectangleArea();
+    abstract void squareArea();
+    abstract void circleArea();
+}
+class Area{
+    void rectangleArea(int length,int breadth){
+    System.out.println("Area of rectangle :" + (length*breadth));    
+    } 
+    void squareArea(int side){
+    System.out.println("Area of square :"+side*side);    
+    }
+    void circleArea(int radius){
+    System.out.println("Area of circle :"+radius*radius);    
+    }
+}
+public class Main
+{
+	public static void main(String[] args){
+	Area ob= new Area();
+	ob.rectangleArea(4,6);
+	ob.squareArea(5);
+	ob.circleArea(4);
+	}
+}
