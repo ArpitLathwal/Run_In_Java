@@ -1,0 +1,38 @@
+import java.util.*;
+class Numbers{
+    int I1,I2;
+    Numbers(int x,int y){
+    I1=x;
+    I2=y;
+    }
+    public void add(){
+    System.out.println("Addition is " + (I1+I2));    
+    }
+    public void subtract(){
+    System.out.println("Subtraction  is " + (I1-I2));      
+    } 
+    public void multiply(){
+    System.out.println("Multiplication  is " + (I1*I2));      
+    }
+    public void division(){
+    System.out.println("Division is " + (I1/I2));      
+    }
+    public void modulus(){
+    System.out.println("modulus is " + (I1%I2));      
+    }
+}
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+		System.out.println("Enter two integers");
+		int a= sc.nextInt();
+		int b= sc.nextInt();
+		Numbers OB = new Numbers(a,b);
+		OB.add();
+		OB.subtract();
+		OB.multiply();
+		OB.division();
+		OB.modulus();
+		}
+}
