@@ -1,0 +1,36 @@
+interface Interface1{
+    public void Method1();
+}
+interface Interface2 extends Interface1 {
+    public void Method2();
+}
+interface Interface3 extends Interface2{
+    public void Method3();
+}
+interface Interface4 extends Interface3{
+    public void Method4();
+}
+class Class1{
+   public void Method1(){
+    System.out.println("Method1");
+    }
+     public void Method2(){
+    System.out.println("Method2");
+    }
+    public void Method3(){
+    System.out.println("Method3");
+    }
+     public void Method4(){
+    System.out.println("Method4");
+    }
+}
+public class Main
+{
+	public static void main(String[] args) {
+	Class1 OB1 = new Class1();
+	OB1.Method1();
+	OB1.Method2();
+	OB1.Method3();
+	OB1.Method4();
+	}
+}
