@@ -1,0 +1,29 @@
+ import java.util.*;
+class Minutes_To{
+    int min;
+    Minutes_To(int min){
+    this.min= min;    
+    }
+   public void days(){
+    System.out.println(min + "minutes in days =" + (min/1440));   
+   }
+   public void months(){
+    System.out.println(min + "minutes in months =" + (min/43200));   
+   }
+   public void years(){
+    System.out.println(min + "minutes in years =" + (min/525600));   
+   }
+    
+}
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+		System.out.println("Enter number of  minutes");
+		int a= sc.nextInt();
+		Minutes_To OB= new Minutes_To(a);
+		OB.days();
+		OB.months();
+		OB.years();
+	}
+}
