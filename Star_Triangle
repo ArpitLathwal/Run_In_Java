@@ -1,0 +1,25 @@
+import java.util.*;
+class Star{
+    int i,j,x,y;
+    Star(int i){
+    this.i=i;
+    }
+    public void display(){
+    for (x=0;x<i;x++)
+	    {
+	        for(y=0;y<=x;y++)
+	        {System.out.print("*");}
+	        System.out.println("");
+	        }
+    }
+    }
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+		System.out.println("Enter rows of triangle");
+		int a= sc.nextInt();
+		Star OB= new Star(a);
+		OB.display();
+	}
+}
